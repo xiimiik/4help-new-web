@@ -155,6 +155,63 @@
       color: $text-icon-stroke-primary;
     }
   }
+
+  @include mobile {
+    border-radius: 16px;
+    margin: 0 16px;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+      gap: 24px;
+    }
+
+    &__info {
+      grid-column: unset;
+    }
+
+    &__inputs {
+      grid-column: unset;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__field {
+      &--name,
+      &--phone,
+      &--contact {
+        grid-column: unset;
+      }
+    }
+
+    &__submit {
+      grid-column: unset;
+      align-self: stretch;
+    }
+
+    &__bottom {
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__bottom-left {
+      gap: 20px;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__nav-column {
+      gap: 12px;
+    }
+  }
 }
 
 .copyright-text {

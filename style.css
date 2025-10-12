@@ -1563,6 +1563,51 @@
 .new-footer__nav-link:hover {
   color: #111112;
 }
+@media (max-width: 1180px) {
+  .new-footer {
+    border-radius: 16px;
+    margin: 0 16px;
+  }
+  .new-footer__form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+  .new-footer__info {
+    grid-column: unset;
+  }
+  .new-footer__inputs {
+    grid-column: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .new-footer__field--name, .new-footer__field--phone, .new-footer__field--contact {
+    grid-column: unset;
+  }
+  .new-footer__submit {
+    grid-column: unset;
+    align-self: stretch;
+  }
+  .new-footer__bottom {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .new-footer__bottom-left {
+    gap: 20px;
+  }
+  .new-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .new-footer__nav-column {
+    gap: 12px;
+  }
+}
 
 .copyright-text {
   font-family: "Fixel Text";
