@@ -814,41 +814,43 @@
     rotate: 6.43deg;
   }
   .new-requests__problem--4 {
-    top: 400px;
+    top: 380px;
     left: 50%;
   }
   .new-requests__problem--5 {
     top: 487px;
     left: 50%;
-    rotate: 4.91deg;
+    rotate: 2.91deg;
   }
   .new-requests__problem--6 {
     top: 563px;
     left: 50%;
-    rotate: -6.04deg;
+    rotate: -3.04deg;
   }
   .new-requests__problem--7 {
     top: 664px;
     left: 50%;
-    rotate: -6.32deg;
+    rotate: 2.32deg;
   }
   .new-requests__problem--8 {
     top: 774px;
     left: 50%;
+    rotate: -1.32deg;
   }
   .new-requests__problem--9 {
-    top: 880px;
+    top: 910px;
     left: 50%;
     rotate: 2.88deg;
   }
   .new-requests__problem--10 {
     top: 1001px;
     left: 50%;
-    rotate: 12.24deg;
+    rotate: -2.24deg;
   }
   .new-requests__problem--11 {
     top: 1099px;
     left: 50%;
+    rotate: 2.24deg;
   }
 }
 
