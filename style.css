@@ -1046,9 +1046,10 @@
     padding: 0 16px;
   }
   .new-steps__cta {
-    position: static;
-    transform: none;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -70px;
     margin-top: 40px;
   }
 }
