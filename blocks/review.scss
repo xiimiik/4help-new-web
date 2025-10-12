@@ -64,4 +64,30 @@
     @include font-regular-body-2;
     color: $text-icon-stroke-primary;
   }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+
+    &__title {
+      grid-column: unset;
+      grid-row: unset;
+      order: -1;
+      text-align: center;
+    }
+
+    &__item {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+  }
 }

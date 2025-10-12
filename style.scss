@@ -34,4 +34,8 @@ body {
   &--small {
     max-width: 1016px;
   }
+
+  @include mobile {
+    padding: 0 16px;
+  }
 }

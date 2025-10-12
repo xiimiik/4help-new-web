@@ -507,7 +507,7 @@
 
 .new-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 16px 16px;
 }
 @media (min-width: 1360px) {
@@ -519,7 +519,6 @@
   display: flex;
   flex-direction: column;
   padding: 24px;
-  min-width: 440px;
   height: 270px;
   background-color: #ffffff;
   border-radius: 16px;
@@ -565,10 +564,9 @@
   align-items: center;
 }
 .new-features__advantages--bg2 {
-  height: 154px;
-  width: 410px;
   background-image: url("./images/blob2.png");
   background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   align-items: center;
 }
@@ -796,6 +794,15 @@
   align-self: start;
   margin-top: 128px;
 }
+@media (max-width: 1180px) {
+  .new-steps__title {
+    position: static;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0;
+  }
+}
 .new-steps__timeline {
   position: relative;
   display: flex;
@@ -864,7 +871,7 @@
   z-index: 2;
 }
 .new-steps__step {
-  width: 673px;
+  max-width: 673px;
   padding: 32px;
   border-radius: 32px;
   background-color: #ffffff;
@@ -903,6 +910,68 @@
 }
 .new-steps__step--4 {
   rotate: 2.45deg;
+}
+@media (max-width: 1180px) {
+  .new-steps__step {
+    padding: 24px;
+    border-radius: 24px;
+    rotate: 0deg !important;
+  }
+  .new-steps__step--1 {
+    margin-top: 0;
+  }
+  .new-steps__step__title {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    text-decoration: none;
+    letter-spacing: -3%;
+    margin-bottom: 8px;
+  }
+  .new-steps__step__body {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    text-decoration: none;
+    letter-spacing: -2%;
+  }
+}
+@media (max-width: 1180px) {
+  .new-steps {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    gap: 0;
+  }
+  .new-steps__timeline {
+    width: 100%;
+  }
+  .new-steps__line-container {
+    height: 100%;
+  }
+  .new-steps__line {
+    height: 100%;
+  }
+  .new-steps__line-progress {
+    height: 0;
+  }
+  .new-steps__button {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 0px 3px rgba(255, 151, 0, 0.3);
+  }
+  .new-steps__content {
+    gap: 60px;
+    padding: 0 16px;
+  }
+  .new-steps__cta {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 
 .new-may-seen__title {
@@ -955,9 +1024,14 @@
 }
 .new-team__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   margin-bottom: 22px;
+}
+@media (max-width: 1180px) {
+  .new-team__container {
+    grid-template-columns: 1fr;
+  }
 }
 .new-team__item {
   padding: 20px;
@@ -1004,6 +1078,31 @@
 }
 .new-team__cta {
   margin: 0 auto;
+}
+@media (max-width: 1180px) {
+  .new-team__title {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    text-decoration: none;
+    letter-spacing: -3%;
+    margin-bottom: 16px;
+  }
+  .new-team__title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .new-team__show-all {
+    margin-bottom: 16px;
+  }
+  .new-team__container {
+    margin-bottom: 32px;
+  }
+  .new-team__cta {
+    width: 100%;
+  }
 }
 
 .new-review {
@@ -1072,6 +1171,24 @@
   text-decoration: none;
   letter-spacing: -2%;
   color: #111112;
+}
+@media (max-width: 1180px) {
+  .new-review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  .new-review__title {
+    grid-column: unset;
+    grid-row: unset;
+    order: -1;
+    text-align: center;
+  }
+  .new-review__item:nth-child(1), .new-review__item:nth-child(2), .new-review__item:nth-child(3), .new-review__item:nth-child(4), .new-review__item:nth-child(5), .new-review__item:nth-child(6) {
+    grid-column: unset;
+    grid-row: unset;
+  }
 }
 
 .new-faq {
@@ -1395,6 +1512,11 @@ body {
 }
 .new-section--small {
   max-width: 1016px;
+}
+@media (max-width: 1180px) {
+  .new-section {
+    padding: 0 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

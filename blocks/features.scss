@@ -1,6 +1,6 @@
 .new-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 16px 16px;
 
   // На повній ширині показуємо максимум 3 колонки
@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    min-width: 440px;
     height: 270px;
     background-color: $bg-surface-higher;
     border-radius: 16px;
@@ -50,10 +49,9 @@
     }
 
     &--bg2 {
-      height: 154px;
-      width: 410px;
       background-image: url("./images/blob2.png");
       background-repeat: no-repeat;
+      background-size: contain;
       display: flex;
       align-items: center;
     }

@@ -26,10 +26,13 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
-
     margin-bottom: 22px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -74,5 +77,30 @@
 
   &__cta {
     margin: 0 auto;
+  }
+
+  @include mobile {
+    &__title {
+      @include font-bold-title-2;
+      margin-bottom: 16px;
+    }
+
+    &__title-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    &__show-all {
+      margin-bottom: 16px;
+    }
+
+    &__container {
+      margin-bottom: 32px;
+    }
+
+    &__cta {
+      width: 100%;
+    }
   }
 }
