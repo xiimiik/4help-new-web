@@ -447,7 +447,7 @@
     height: calc(100vh - 56px - 32px);
   }
   .new-hero__title-container {
-    top: 25%;
+    top: 40%;
   }
   .new-hero__title {
     font-family: "Fixel Text";
