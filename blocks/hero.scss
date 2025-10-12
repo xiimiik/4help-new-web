@@ -98,4 +98,44 @@
       cursor: pointer;
     }
   }
+
+  @include mobile {
+    height: calc(100vh - 56px - 32px);
+
+    &__title-container {
+      top: 25%;
+    }
+
+    &__title {
+      @include font-bold-title-1;
+      text-align: center;
+    }
+
+    &__subtitle {
+      @include font-regular-title-5;
+      text-align: center;
+    }
+
+    &__images {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__image {
+      max-width: 45%;
+      height: auto;
+
+      // Hide woman and man on mobile
+      &:nth-child(1),
+      &:nth-child(4) {
+        display: none;
+      }
+
+      // Show only boy and angry
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
 }

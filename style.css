@@ -442,6 +442,46 @@
   transform: scale(1.05) translateY(-10px);
   cursor: pointer;
 }
+@media (max-width: 1180px) {
+  .new-hero {
+    height: calc(100vh - 56px - 32px);
+  }
+  .new-hero__title-container {
+    top: 25%;
+  }
+  .new-hero__title {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    text-decoration: none;
+    letter-spacing: -3%;
+    text-align: center;
+  }
+  .new-hero__subtitle {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-decoration: none;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+  .new-hero__images {
+    justify-content: center;
+    gap: 20px;
+  }
+  .new-hero__image {
+    max-width: 45%;
+    height: auto;
+  }
+  .new-hero__image:nth-child(1), .new-hero__image:nth-child(4) {
+    display: none;
+  }
+  .new-hero__image:nth-child(2), .new-hero__image:nth-child(3) {
+    display: block;
+  }
+}
 
 .new-button {
   font-family: "Fixel Text";
