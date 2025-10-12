@@ -1,0 +1,41 @@
+@import "utils/fonts";
+@import "utils/variables";
+@import "utils/typography";
+@import "utils/mixins";
+
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/button";
+@import "blocks/features";
+@import "blocks/requests";
+@import "blocks/steps";
+@import "blocks/may-seen";
+@import "blocks/team";
+@import "blocks/review";
+@import "blocks/faq";
+@import "blocks/accordion";
+@import "blocks/footer";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Fixel Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  background-color: $bg-surface-blue;
+}
+
+.new-section {
+  max-width: 1360px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+
+  &--small {
+    max-width: 1016px;
+  }
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}

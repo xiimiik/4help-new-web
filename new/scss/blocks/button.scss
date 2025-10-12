@@ -1,0 +1,18 @@
+.new-button {
+  @include font-bold-body-2;
+  background-color: $buttons-primary-default;
+  color: $text-icon-stroke-primary-inverted;
+  padding: 14px 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    box-shadow: 0px 0px 2px 0px #112c8866;
+  }
+
+  &:active {
+    background-color: $buttons-primary-pressed;
+  }
+}

@@ -1,0 +1,243 @@
+.new-header {
+  position: sticky;
+  height: 56px;
+  max-width: 1360px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 12px;
+  z-index: 999;
+  top: 40px;
+  transition: height 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    height: 136px;
+    background-image: linear-gradient(
+      180deg,
+      #f6f8fc 68.22%,
+      rgba(246, 248, 252, 0) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    @include font-regular-body-3;
+    color: $text-icon-stroke-tertiary;
+    transition: all 0.2s ease;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    &:hover {
+      color: $text-icon-stroke-primary;
+    }
+
+    &--active {
+      background-color: $buttons-secondary-default;
+      font-weight: 500;
+      color: $text-icon-stroke-primary;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 56px;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__cta {
+    @include font-bold-body-2;
+    background-color: $buttons-primary-default;
+    color: $text-icon-stroke-primary-inverted;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: $buttons-primary-default;
+      opacity: 0.9;
+    }
+
+    &:active {
+      background-color: $buttons-primary-pressed;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+
+  &__top {
+    display: contents;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  @include mobile {
+    padding: 16px;
+    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    overflow: visible;
+
+    &--open {
+      overflow: visible;
+    }
+
+    &__top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      height: 24px;
+      order: 0;
+    }
+
+    &__logo {
+      position: static;
+      transform: none;
+      order: 0;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    &__burger {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: white;
+      border-radius: 0 0 12px 12px;
+      padding: 0 16px;
+      transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    }
+
+    &--open &__nav {
+      max-height: 500px;
+      opacity: 1;
+      padding: 16px;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__link {
+      @include font-bold-body-2;
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 10px 16px;
+      background-color: $bg-surface;
+      color: $text-icon-stroke-primary;
+      border-radius: 8px;
+      text-align: left;
+      line-height: 20px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &--active {
+        background-color: $buttons-secondary-default;
+      }
+    }
+
+    &__cta {
+      &--mobile {
+        display: block;
+        width: 100%;
+        margin-top: 12px;
+        text-align: center;
+        height: 40px;
+        line-height: 20px;
+        padding: 10px 20px;
+      }
+
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
