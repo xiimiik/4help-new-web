@@ -772,7 +772,7 @@
           <h3 class="new-footer__title">Почати змінюватись</h3>
           <p class="new-footer__body">
             Ви можете залишити заявку у формі або написати нам в Telegram
-            <b>@psy4Help</b>
+            <b><a target="_blank" href="https://t.me/psy4Help">@psy4Help</a></b>
             і наш менеджер зв'яжеться з Вами протягом доби.
           </p>
           <p class="new-footer__body">
@@ -804,11 +804,14 @@
 
           <div class="new-footer__field new-footer__field--contact">
             <label class="new-footer__label">Спосіб зв'язку</label>
-            <input
-              type="text"
-              class="new-footer__input"
-              placeholder="Telegram, Viber..."
-            />
+            <select class="new-footer__input" required>
+              <option class="new-footer__select-option" value="0">
+                Viber
+              </option>
+              <!-- <option value="1">Telegram</option> -->
+              <option value="2">WatsApp</option>
+              <option value="3">Дзвінок (тільки для України)</option>
+            </select>
           </div>
 
           <button class="new-button new-footer__submit">Надіслати</button>
