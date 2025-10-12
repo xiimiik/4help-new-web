@@ -662,6 +662,17 @@
   z-index: 10;
   pointer-events: none;
 }
+@media (max-width: 1180px) {
+  .new-requests__title {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-decoration: none;
+    letter-spacing: -2%;
+    top: 16px;
+  }
+}
 .new-requests__image {
   position: absolute;
   top: 50%;
@@ -771,6 +782,74 @@
 .new-requests__problem--11 {
   top: 1371px;
   left: 584px;
+}
+@media (max-width: 1180px) {
+  .new-requests__problem {
+    max-width: 300px;
+    width: 100%;
+    padding: 14px;
+    transform: translateX(-50%);
+  }
+  .new-requests__problem__title {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: none;
+    letter-spacing: -2%;
+  }
+  .new-requests__problem--1 {
+    top: 100px;
+    left: 50%;
+    rotate: 7.38deg;
+  }
+  .new-requests__problem--2 {
+    top: 183px;
+    left: 50%;
+    rotate: -5.59deg;
+  }
+  .new-requests__problem--3 {
+    top: 311px;
+    left: 50%;
+    rotate: 6.43deg;
+  }
+  .new-requests__problem--4 {
+    top: 400px;
+    left: 50%;
+  }
+  .new-requests__problem--5 {
+    top: 487px;
+    left: 50%;
+    rotate: 4.91deg;
+  }
+  .new-requests__problem--6 {
+    top: 563px;
+    left: 50%;
+    rotate: -6.04deg;
+  }
+  .new-requests__problem--7 {
+    top: 664px;
+    left: 50%;
+    rotate: -6.32deg;
+  }
+  .new-requests__problem--8 {
+    top: 774px;
+    left: 50%;
+  }
+  .new-requests__problem--9 {
+    top: 880px;
+    left: 50%;
+    rotate: 2.88deg;
+  }
+  .new-requests__problem--10 {
+    top: 1001px;
+    left: 50%;
+    rotate: 12.24deg;
+  }
+  .new-requests__problem--11 {
+    top: 1099px;
+    left: 50%;
+  }
 }
 
 .new-steps {

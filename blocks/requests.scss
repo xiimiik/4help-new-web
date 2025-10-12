@@ -23,6 +23,11 @@
     right: 0;
     z-index: 10;
     pointer-events: none;
+
+    @include mobile {
+      @include font-bold-title-5;
+      top: 16px;
+    }
   }
 
   &__image {
@@ -141,6 +146,72 @@
     &--11 {
       top: 1371px;
       left: 584px;
+    }
+  }
+
+  @include mobile {
+    &__problem {
+      max-width: 300px;
+      width: 100%;
+      padding: 14px;
+      transform: translateX(-50%);
+
+      &__title {
+        @include font-regular-body-2;
+      }
+
+      &--1 {
+        top: 100px;
+        left: 50%;
+        rotate: 7.38deg;
+      }
+      &--2 {
+        top: 183px;
+        left: 50%;
+        rotate: -5.59deg;
+      }
+      &--3 {
+        top: 311px;
+        left: 50%;
+        rotate: 6.43deg;
+      }
+      &--4 {
+        top: 400px;
+        left: 50%;
+      }
+      &--5 {
+        top: 487px;
+        left: 50%;
+        rotate: 4.91deg;
+      }
+      &--6 {
+        top: 563px;
+        left: 50%;
+        rotate: -6.04deg;
+      }
+      &--7 {
+        top: 664px;
+        left: 50%;
+        rotate: -6.32deg;
+      }
+      &--8 {
+        top: 774px;
+        left: 50%;
+      }
+      &--9 {
+        top: 880px;
+        left: 50%;
+        rotate: 2.88deg;
+      }
+      &--10 {
+        top: 1001px;
+        left: 50%;
+        rotate: 12.24deg;
+      }
+      &--11 {
+        top: 1099px;
+        left: 50%;
+      }
     }
   }
 }
