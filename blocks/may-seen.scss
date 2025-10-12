@@ -1,0 +1,15 @@
+.new-may-seen {
+  &__title {
+    @include font-bold-title-1;
+
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+}

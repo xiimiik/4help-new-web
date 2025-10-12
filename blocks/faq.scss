@@ -1,0 +1,27 @@
+.new-faq {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 16px;
+
+  &__title {
+    @include font-bold-title-1;
+    margin-bottom: 22px;
+    grid-column: 2 / 3;
+  }
+
+  &__container {
+    grid-column: 4 / 8;
+  }
+
+  @include mobile {
+    display: block;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+  }
+}

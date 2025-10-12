@@ -1,0 +1,105 @@
+.new-accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__item {
+    background-color: $bg-surface;
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__title {
+    @include font-regular-body-2;
+    color: $text-icon-stroke-primary;
+    flex: 1;
+    padding-right: 16px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    img {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+  }
+
+  &__icon-plus {
+    opacity: 1;
+  }
+
+  &__icon-minus {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__item--active &__icon-plus {
+    opacity: 0;
+  }
+
+  &__item--active &__icon-minus {
+    opacity: 1;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin 0.3s ease;
+  }
+
+  &__item--active &__content {
+    max-height: 1000px;
+    margin-top: 16px;
+  }
+
+  &__body {
+    @include font-regular-body-2;
+    color: $text-icon-stroke-secondary;
+    line-height: 1.6;
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  @include mobile {
+    &__item {
+      padding: 16px;
+    }
+
+    &__title {
+      @include font-regular-body-2;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

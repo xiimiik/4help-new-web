@@ -1,0 +1,114 @@
+.new-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 16px 16px;
+
+  // На повній ширині показуємо максимум 3 колонки
+  @media (min-width: 1360px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    min-width: 440px;
+    height: 270px;
+    background-color: $bg-surface-higher;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(30px);
+
+    &.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}).animate-in {
+        transition: opacity 0.6s ease #{$i * 0.1}s, transform 0.6s ease #{$i * 0.1}s;
+      }
+    }
+  }
+
+  &__advantages {
+    height: 132px;
+    margin-bottom: 16px;
+
+    &--bg1 {
+      background-image: url("./images/blob1.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    &--bg2 {
+      height: 154px;
+      width: 410px;
+      background-image: url("./images/blob2.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    &--bg3 {
+      background-image: url("./images/blob3.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    &--bg4 {
+      background-image: url("./images/blob4.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    &--bg5 {
+      background-image: url("./images/blob5.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    &--bg6 {
+      background-image: url("./images/blob6.png");
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include GIGA_TITLE;
+
+    &--4 {
+      padding-left: 20px;
+    }
+    &--5 {
+      padding-left: 40px;
+    }
+    &--6 {
+      padding-left: 45px;
+    }
+  }
+
+  &__subtitle {
+    @include font-bold-title-5;
+    margin-bottom: 8px;
+    color: $text-icon-stroke-primary;
+  }
+
+  &__body {
+    @include font-regular-body-2;
+    color: $grayscale-60;
+  }
+}

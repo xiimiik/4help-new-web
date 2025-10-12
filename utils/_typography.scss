@@ -1,0 +1,208 @@
+@mixin GIGA_TITLE {
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-regular-title-1 {
+  // REGULAR/Title 1 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-regular-title-2 {
+  // REGULAR/Title 2 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-regular-title-3 {
+  // REGULAR/Title 3 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-regular-title-4 {
+  // REGULAR/Title 4 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-title-5 {
+  // REGULAR/Title 5 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-body-1 {
+  // REGULAR/Body 1 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-body-2 {
+  // REGULAR/Body 2 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-body-3 {
+  // REGULAR/Body 3 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-label-1 {
+  // REGULAR/Label 1 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-regular-label-2 {
+  // REGULAR/Label 2 //
+  font-family: "Fixel Text";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-title-1 {
+  // BOLD/Title 1 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-bold-title-2 {
+  // BOLD/Title 2 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-bold-title-3 {
+  // BOLD/Title 3 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  text-decoration: none;
+  letter-spacing: -3%;
+}
+
+@mixin font-bold-title-4 {
+  // BOLD/Title 4 //
+  font-family: "Fixel Text";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-title-5 {
+  // BOLD/Title 5 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-body-1 {
+  // BOLD/Body 1 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-body-2 {
+  // BOLD/Body 2 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-body-3 {
+  // BOLD/Body 3 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 135%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-label-1 {
+  // BOLD/Label 1 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}
+
+@mixin font-bold-label-2 {
+  // BOLD/Label 2 //
+  font-family: "Fixel Text";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -2%;
+}

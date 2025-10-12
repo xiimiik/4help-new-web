@@ -1,0 +1,146 @@
+.new-requests-wrapper {
+  height: 2700px;
+  position: relative;
+}
+
+.new-requests {
+  background-color: $main-blue-95;
+  border-radius: 32px;
+  height: 830px;
+  position: sticky;
+  top: 106px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include font-bold-title-1;
+    color: $grayscale-0;
+    text-align: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__scroll-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    padding: 0 80px;
+  }
+
+  &__problems-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 1680px;
+    padding: 100px 80px 0;
+    will-change: transform;
+
+    &--even {
+      z-index: 1;
+    }
+
+    &--odd {
+      z-index: 3;
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 1550px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  &__problem {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 464px;
+    padding: 32px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid;
+    border-image-source: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    backdrop-filter: blur(84px);
+
+    &__title {
+      @include font-regular-title-2;
+      color: $grayscale-0;
+    }
+
+    &--1 {
+      top: 0;
+      left: 76px;
+      rotate: 7.38deg;
+    }
+    &--2 {
+      top: 364px;
+      left: 183px;
+      rotate: 5.59deg;
+    }
+    &--3 {
+      top: 614px;
+      left: 69px;
+      rotate: -6.43deg;
+    }
+    &--4 {
+      top: 884px;
+      left: 119px;
+    }
+    &--5 {
+      top: 1134px;
+      left: 64px;
+      rotate: -14.91deg;
+    }
+    &--6 {
+      top: 199px;
+      left: 809px;
+      rotate: -6.04deg;
+    }
+    &--7 {
+      top: 420px;
+      left: 703px;
+      rotate: -16.32deg;
+    }
+    &--8 {
+      top: 679px;
+      left: 809px;
+    }
+    &--9 {
+      top: 892px;
+      left: 764px;
+      rotate: 2.88deg;
+    }
+    &--10 {
+      top: 1082px;
+      left: 726px;
+      rotate: 12.24deg;
+    }
+    &--11 {
+      top: 1371px;
+      left: 584px;
+    }
+  }
+}
