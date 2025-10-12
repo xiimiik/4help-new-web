@@ -19,6 +19,19 @@
   </head>
   <body class="new-body">
     <header class="new-header">
+      <div class="new-header__top">
+        <div class="new-header__logo">
+          <img
+            src="images/logo.svg"
+            alt="4help"
+          />
+        </div>
+
+        <button class="new-header__burger" aria-label="Меню">
+          <img src="images/burger.svg" alt="Меню" />
+        </button>
+      </div>
+
       <nav class="new-header__nav">
         <ul class="new-header__list">
           <li class="new-header__item">
@@ -57,16 +70,11 @@
             >
           </li>
         </ul>
+
+        <button class="new-header__cta new-header__cta--mobile">Записатися на прийом</button>
       </nav>
 
-      <div class="new-header__logo">
-        <img
-          src="images/logo.svg"
-          alt="4help"
-        />
-      </div>
-
-      <button class="new-header__cta">Записатися на прийом</button>
+      <button class="new-header__cta new-header__cta--desktop">Записатися на прийом</button>
     </header>
 
     <section class="new-section new-hero">
@@ -847,6 +855,7 @@
 
     <div class="copyright-text"></div>
 
+    <script src="header.js"></script>
     <script src="steps-animation.js"></script>
     <script src="accordion.js"></script>
 </html>
