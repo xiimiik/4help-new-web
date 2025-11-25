@@ -1,0 +1,401 @@
+// Modal styles
+.new-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  &--active {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+    background-color: #f6f8fc;
+    border-radius: 32px;
+    overflow: hidden;
+    z-index: 1;
+    transition: max-width 0.3s ease;
+
+    &--expanded {
+      max-width: 1016px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    height: 150px;
+    background-color: #cedcf2;
+    border-radius: 32px 32px 0 0;
+    overflow: hidden;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #fce8e8;
+    border: none;
+    border-radius: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      background-color: #fad4d4;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__header-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #111112;
+    margin: 0;
+  }
+
+  &__text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__text {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #36373a;
+    margin: 0;
+
+    b {
+      font-weight: 600;
+    }
+
+    a {
+      color: #36373a;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ff9700;
+      }
+
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  &__btn {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+
+    &--primary {
+      background-color: #ff9700;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #e68703;
+      }
+    }
+
+    &--text {
+      background-color: transparent;
+      color: #ff9700;
+      padding: 12px 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // Expanded state
+  &__expanded-content {
+    display: none;
+  }
+
+  &__container--expanded &__expanded-content {
+    display: block;
+  }
+
+  &__container--expanded &__buttons {
+    display: none;
+  }
+
+  &__container--expanded &__text-section {
+    flex-direction: row;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  &__container--expanded &__text-wrapper {
+    flex: 1;
+  }
+
+  &__container--expanded &__btn--primary {
+    width: auto;
+    height: 93px;
+    border-radius: 120px;
+    box-shadow: 0px 0px 0px 4px rgba(255, 151, 0, 0.3);
+    flex-shrink: 0;
+    padding: 12px 24px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  &__form-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__field--textarea {
+    flex: 1;
+  }
+
+  &__label {
+    font-family: "Fixel Text";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: #36373a;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #111112;
+    height: 40px;
+
+    &::placeholder {
+      color: #d7d8da;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #ff9700;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%2336373A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+  }
+
+  &__textarea {
+    height: auto;
+    resize: none;
+    flex: 1;
+    min-height: 120px;
+  }
+
+  &__char-count {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: #6b6a71;
+    text-align: right;
+    margin-top: -4px;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__checkbox-input {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #475132;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    appearance: none;
+    background-color: transparent;
+    position: relative;
+
+    &:checked {
+      background-color: #475132;
+      border-color: #475132;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 9px;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L4.5 8L11 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__checkbox-label {
+    font-family: "Fixel Text";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: #36373a;
+    cursor: pointer;
+  }
+
+  &__submit {
+    background-color: #a3a4a9;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 8px;
+
+    &:not(:disabled) {
+      background-color: #ff9700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e68703;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  @include mobile {
+    padding: 16px;
+
+    &__container {
+      max-width: 100%;
+
+      &--expanded {
+        max-width: 100%;
+      }
+    }
+
+    &__content {
+      padding: 24px 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__container--expanded &__text-section {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__container--expanded &__btn--primary {
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      box-shadow: none;
+    }
+  }
+}
+
+// Prevent body scroll when modal is open
+body.modal-open {
+  overflow: hidden;
+}

@@ -974,7 +974,15 @@
             <h3 class="new-footer__title">Почати змінюватись</h3>
             <p class="new-footer__body">
               Ви можете залишити заявку у формі або написати нам в Telegram
-              <b>@psy4Help</b> і наш менеджер зв'яжеться з Вами протягом доби.
+              <b
+                ><a
+                  href="https://t.me/psy4Help"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><b>@psy4Help</b></a
+                ></b
+              >
+              і наш менеджер зв'яжеться з Вами протягом доби.
             </p>
             <p class="new-footer__body">
               <b>Очікуйте на відповідь у робочі дні з 9.00 до 19.00.</b>
@@ -1181,10 +1189,203 @@
 
     <div class="copyright-text"></div>
 
+    <!-- Modal -->
+    <div class="new-modal">
+      <div class="new-modal__overlay"></div>
+      <div class="new-modal__container">
+        <div class="new-modal__header">
+          <button
+            class="new-modal__close"
+            aria-label="Закрити"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 5L5 15M5 5L15 15"
+                stroke="#B41818"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <img
+            src="images/modal_header.svg"
+            alt=""
+            class="new-modal__header-image"
+          />
+        </div>
+
+        <div class="new-modal__content">
+          <h2 class="new-modal__title">Почати змінюватись</h2>
+
+          <div class="new-modal__text-section">
+            <div class="new-modal__text-wrapper">
+              <p class="new-modal__text">
+                Ви можете залишити заявку у формі або написати нам в Telegram
+                <a
+                  href="https://t.me/psy4Help"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><b>@psy4Help</b></a
+                >
+                і наш менеджер зв'яжеться з Вами протягом доби. <br /><br />
+                <b>Очікуйте на відповідь у робочі дні з 9.00 до 19.00.</b>
+                Відправляючи заявку, переконайтеся, що Ваш номер не прихований у
+                пошуку в налаштуваннях приватності, інакше ми не зможемо з Вами
+                зв'язатись.
+              </p>
+            </div>
+
+            <button class="new-modal__btn new-modal__btn--primary">
+              Заповнити анкету, щоб підібрати фахівця
+            </button>
+          </div>
+
+          <div class="new-modal__buttons">
+            <button class="new-modal__btn new-modal__btn--text">
+              Звʼяжіться зі мною
+            </button>
+          </div>
+
+          <!-- Expanded form -->
+          <div class="new-modal__expanded-content">
+            <form class="new-modal__form">
+              <div class="new-modal__form-col">
+                <div class="new-modal__field">
+                  <label
+                    class="new-modal__label"
+                    for="modal-name"
+                    >Ім'я</label
+                  >
+                  <input
+                    type="text"
+                    id="modal-name"
+                    name="name"
+                    class="new-modal__input"
+                    placeholder="Введіть Ваше ім'я"
+                  />
+                </div>
+
+                <div class="new-modal__field">
+                  <label
+                    class="new-modal__label"
+                    for="modal-phone"
+                    >Номер телефону</label
+                  >
+                  <input
+                    type="tel"
+                    id="modal-phone"
+                    name="phone"
+                    class="new-modal__input"
+                    placeholder="Введіть номер телефону"
+                  />
+                </div>
+
+                <div class="new-modal__field">
+                  <label
+                    class="new-modal__label"
+                    for="modal-contact"
+                    >Спосіб зв'язку</label
+                  >
+                  <select
+                    id="modal-contact"
+                    name="contact"
+                    class="new-modal__select"
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                    >
+                      Виберіть спосіб зв'язку
+                    </option>
+                    <option value="telegram">Telegram</option>
+                    <option value="phone">Телефон</option>
+                    <option value="viber">Viber</option>
+                  </select>
+                </div>
+
+                <div class="new-modal__field">
+                  <label
+                    class="new-modal__label"
+                    for="modal-service"
+                    >Послуга</label
+                  >
+                  <select
+                    id="modal-service"
+                    name="service"
+                    class="new-modal__select"
+                  >
+                    <option
+                      value=""
+                      disabled
+                      selected
+                    >
+                      Оберіть послугу
+                    </option>
+                    <option value="psychologist">Психолог</option>
+                    <option value="psychotherapist">Психотерапевт</option>
+                    <option value="psychiatrist">Психіатр</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="new-modal__form-col">
+                <div class="new-modal__field new-modal__field--textarea">
+                  <label
+                    class="new-modal__label"
+                    for="modal-question"
+                    >Питання</label
+                  >
+                  <textarea
+                    id="modal-question"
+                    name="question"
+                    class="new-modal__textarea"
+                    placeholder="Введіть Ваше питання"
+                    maxlength="400"
+                  ></textarea>
+                  <div class="new-modal__char-count">0/400</div>
+                </div>
+
+                <div class="new-modal__checkbox">
+                  <input
+                    type="checkbox"
+                    id="modal-agreement"
+                    class="new-modal__checkbox-input"
+                  />
+                  <label
+                    for="modal-agreement"
+                    class="new-modal__checkbox-label"
+                  >
+                    Я погоджуюсь на умови оферти.
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="new-modal__btn new-modal__submit"
+                  disabled
+                >
+                  Надіслати
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="header.js"></script>
     <script src="steps-animation.js"></script>
     <script src="accordion.js"></script>
     <script src="carousel.js"></script>
     <script src="footer.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>
