@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>4help - Сучасна психотерапія для сучасного життя</title>
+
+    <link
+      rel="stylesheet"
+      href="reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body class="new-body">
+    <header class="new-header">
+      <div class="new-header__top">
+        <div class="new-header__logo">
+          <img
+            src="images/logo.svg"
+            alt="4help"
+          />
+        </div>
+
+        <button
+          class="new-header__burger"
+          aria-label="Меню"
+        >
+          <img
+            src="images/burger.svg"
+            alt="Меню"
+          />
+        </button>
+      </div>
+
+      <nav class="new-header__nav">
+        <ul class="new-header__list">
+          <li class="new-header__item">
+            <a
+              href="#"
+              class="new-header__link new-header__link--active"
+              >Головна</a
+            >
+          </li>
+          <li class="new-header__item">
+            <a
+              href="#"
+              class="new-header__link"
+              >Підходи</a
+            >
+          </li>
+          <li class="new-header__item">
+            <a
+              href="#"
+              class="new-header__link"
+              >Ціни</a
+            >
+          </li>
+          <li class="new-header__item">
+            <a
+              href="#"
+              class="new-header__link"
+              >Про центр</a
+            >
+          </li>
+          <li class="new-header__item">
+            <a
+              href="#"
+              class="new-header__link"
+              >Терапевтам</a
+            >
+          </li>
+        </ul>
+
+        <button class="new-header__cta new-header__cta--mobile">
+          Записатися на прийом
+        </button>
+      </nav>
+
+      <button class="new-header__cta new-header__cta--desktop">
+        Записатися на прийом
+      </button>
+    </header>
+
+    <section class="new-section new-services">
+      <div class="new-services__carousel">
+        <!-- Slide 1 -->
+        <div class="new-services__slide new-services__slide--active">
+          <div class="new-services__background">
+            <img
+              src="images/services-bg-1.png"
+              alt=""
+              class="new-services__bg-image"
+            />
+          </div>
+          <div class="new-services__content">
+            <div class="new-services__text">
+              <h2 class="new-services__title">Індивідуальна терапія</h2>
+              <p class="new-services__description">
+                Персональний підхід до вирішення ваших психологічних проблем та
+                досягнення внутрішньої гармонії
+              </p>
+            </div>
+            <button class="new-button new-services__cta">
+              Записатися на консультацію
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="new-services__slide">
+          <div class="new-services__background">
+            <img
+              src="images/services-bg-1.png"
+              alt=""
+              class="new-services__bg-image"
+            />
+          </div>
+          <div class="new-services__content">
+            <div class="new-services__text">
+              <h2 class="new-services__title">Сімейна психотерапія</h2>
+              <p class="new-services__description">
+                Допоможемо зміцнити стосунки, вирішити конфлікти та знайти
+                взаєморозуміння в родині
+              </p>
+            </div>
+            <button class="new-button new-services__cta">
+              Дізнатися більше
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="new-services__slide">
+          <div class="new-services__background">
+            <img
+              src="images/services-bg-1.png"
+              alt=""
+              class="new-services__bg-image"
+            />
+          </div>
+          <div class="new-services__content">
+            <div class="new-services__text">
+              <h2 class="new-services__title">Групова терапія</h2>
+              <p class="new-services__description">
+                Підтримка та розуміння в колі людей з подібним досвідом. Разом
+                ми сильніші
+              </p>
+            </div>
+            <button class="new-button new-services__cta">
+              Приєднатися до групи
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="new-services__slide">
+          <div class="new-services__background">
+            <img
+              src="images/services-bg-1.png"
+              alt=""
+              class="new-services__bg-image"
+            />
+          </div>
+          <div class="new-services__content">
+            <div class="new-services__text">
+              <h2 class="new-services__title">Онлайн консультації</h2>
+              <p class="new-services__description">
+                Професійна психологічна допомога з будь-якої точки світу в
+                зручний для вас час
+              </p>
+            </div>
+            <button class="new-button new-services__cta">
+              Записатися онлайн
+            </button>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="new-services__slide">
+          <div class="new-services__background">
+            <img
+              src="images/services-bg-1.png"
+              alt=""
+              class="new-services__bg-image"
+            />
+          </div>
+          <div class="new-services__content">
+            <div class="new-services__text">
+              <h2 class="new-services__title">Корпоративна психологія</h2>
+              <p class="new-services__description">
+                Покращення психологічного клімату в команді та підвищення
+                продуктивності співробітників
+              </p>
+            </div>
+            <button class="new-button new-services__cta">
+              Замовити для компанії
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Controls (outside slides) -->
+        <div class="new-services__dots"></div>
+        <div class="new-services__controls">
+          <button
+            class="new-services__arrow new-services__arrow--prev"
+            aria-label="Попередній слайд"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 15L7.5 10L12.5 5"
+                stroke="#FF9700"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="new-services__arrow new-services__arrow--next"
+            aria-label="Наступний слайд"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.5 5L12.5 10L7.5 15"
+                stroke="#FF9700"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-section new-education">
+      <h2 class="new-education__title">Чому освіта у 4help?</h2>
+
+      <div class="new-education__scroll-container">
+        <div class="new-education__cards">
+          <!-- First set of cards -->
+          <div class="new-education__card new-education__card--1">
+            <img
+              src="images/therapist_vector_1.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Співпрацюємо з ТОП-овоми науковцями та практиками з усього світу
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--2">
+            <img
+              src="images/therapist_vector_2.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Робимо доступною можливість отримувати знання з першоджерела, від
+              людей, які розвивають і рухають поведінкову науку і пишуть ті самі
+              підручники, які ми всі з Вами зачитуємо до дір
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--3">
+            <img
+              src="images/therapist_vector_3.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Побудували всередині команди систему внутрішнього навчання та
+              розвитку фахівців, яка дозволяє кожному з нас постійно тримати в
+              тонусі свої "терапевтичні мʼязи". 4help точно знає, що робити, щоб
+              завжди залишатися в курсі найактуальніших наукових досягнень і
+              розвивати свою професійну майстерність. і готові навчити вас!
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--4">
+            <img
+              src="images/therapist_vector_4.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Ми – є авторами книжок. Наші фахівці пишуть науково-популярні
+              книги, щоб ділитися знаннями.
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--5">
+            <img
+              src="images/therapist_vector_5.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              200+ студентів вже пройшли наші курси
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--6">
+            <img
+              src="images/therapist_vector_6.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Ми — офіційна база практики Українського Католицького
+              Університету, бо для нас класна освіта — це знання та практика, що
+              оживають у натхненних спільноті людей.
+            </p>
+          </div>
+
+          <!-- Duplicate set for seamless loop -->
+          <div class="new-education__card new-education__card--1">
+            <img
+              src="images/therapist_vector_1.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Співпрацюємо з ТОП-овоми науковцями та практиками з усього світу
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--2">
+            <img
+              src="images/therapist_vector_2.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Робимо доступною можливість отримувати знання з першоджерела, від
+              людей, які розвивають і рухають поведінкову науку і пишуть ті самі
+              підручники, які ми всі з Вами зачитуємо до дір
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--3">
+            <img
+              src="images/therapist_vector_3.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Побудували всередині команди систему внутрішнього навчання та
+              розвитку фахівців, яка дозволяє кожному з нас постійно тримати в
+              тонусі свої "терапевтичні мʼязи". 4help точно знає, що робити, щоб
+              завжди залишатися в курсі найактуальніших наукових досягнень і
+              розвивати свою професійну майстерність. і готові навчити вас!
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--4">
+            <img
+              src="images/therapist_vector_4.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Ми – є авторами книжок. Наші фахівці пишуть науково-популярні
+              книги, щоб ділитися знаннями.
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--5">
+            <img
+              src="images/therapist_vector_5.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              200+ студентів вже пройшли наші курси
+            </p>
+          </div>
+
+          <div class="new-education__card new-education__card--6">
+            <img
+              src="images/therapist_vector_6.svg"
+              alt=""
+              class="new-education__card-bg"
+            />
+            <p class="new-education__card-text">
+              Ми — офіційна база практики Українського Католицького
+              Університету, бо для нас класна освіта — це знання та практика, що
+              оживають у натхненних спільноті людей.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="new-footer">
+      <!-- Closed State: Text Left + Buttons Right -->
+      <div
+        class="new-footer__closed"
+        id="footerClosed"
+      >
+        <div class="new-footer__closed-content">
+          <div class="new-footer__closed-text">
+            <h3 class="new-footer__title">Почати змінюватись</h3>
+            <p class="new-footer__body">
+              Ви можете залишити заявку у формі або написати нам в Telegram
+              <b>@psy4Help</b> і наш менеджер зв'яжеться з Вами протягом доби.
+            </p>
+            <p class="new-footer__body">
+              <b>Очікуйте на відповідь у робочі дні з 9.00 до 19.00.</b>
+              Відправляючи заявку, переконайтеся, що Ваш номер не прихований у
+              пошуку в налаштуваннях приватності, інакше ми не зможемо з Вами
+              зв'язатись.
+            </p>
+          </div>
+          <div class="new-footer__closed-buttons">
+            <button
+              class="new-footer__btn new-footer__btn--primary"
+              id="fillFormBtn"
+            >
+              Заповнити анкету, щоб підібрати фахівця
+            </button>
+            <button
+              class="new-footer__btn new-footer__btn--text"
+              id="contactMeBtn"
+            >
+              Зв'яжіться зі мною
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open State: Contact Form -->
+      <div
+        class="new-footer__open"
+        id="footerForm"
+      >
+        <!-- Header: Text Left + Button Right -->
+        <div class="new-footer__open-header">
+          <div class="new-footer__open-text">
+            <h3 class="new-footer__title">Почати змінюватись</h3>
+            <p class="new-footer__body">
+              Ви можете залишити заявку у формі або написати нам в Telegram
+              <b>@psy4Help</b> і наш менеджер зв'яжеться з Вами протягом доби.
+            </p>
+            <p class="new-footer__body">
+              <b>Очікуйте на відповідь у робочі дні з 9.00 до 19.00.</b>
+              Відправляючи заявку, переконайтеся, що Ваш номер не прихований у
+              пошуку в налаштуваннях приватності, інакше ми не зможемо з Вами
+              зв'язатись.
+            </p>
+          </div>
+          <button
+            class="new-footer__btn new-footer__btn--primary"
+            id="fillFormBtnOpen"
+          >
+            Заповнити анкету
+          </button>
+        </div>
+
+        <!-- Form: 2 Columns -->
+        <div class="new-footer__open-form">
+          <!-- Left Column: 4 Fields -->
+          <div class="new-footer__form-col new-footer__form-col--left">
+            <div class="new-footer__field">
+              <label class="new-footer__label">Ім'я</label>
+              <input
+                type="text"
+                class="new-footer__input"
+                placeholder="Введіть Ваше ім'я"
+              />
+            </div>
+
+            <div class="new-footer__field">
+              <label class="new-footer__label">Номер телефону</label>
+              <input
+                type="tel"
+                class="new-footer__input"
+                placeholder="Введіть Ваше ім'я"
+              />
+            </div>
+
+            <div class="new-footer__field">
+              <label class="new-footer__label">Спосіб зв'язку</label>
+              <select
+                class="new-footer__input"
+                required
+              >
+                <option value="">Виберіть спосіб зв'язку</option>
+                <option value="viber">Viber</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="telegram">Telegram</option>
+                <option value="call">Дзвінок (тільки для України)</option>
+              </select>
+            </div>
+
+            <div class="new-footer__field">
+              <label class="new-footer__label">Послуга</label>
+              <select
+                class="new-footer__input"
+                required
+              >
+                <option value="">Оберіть послугу</option>
+                <option value="individual">Індивідуальна терапія</option>
+                <option value="family">Сімейна психотерапія</option>
+                <option value="group">Групова терапія</option>
+                <option value="online">Онлайн консультації</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Right Column: Textarea + Checkbox + Button -->
+          <div class="new-footer__form-col new-footer__form-col--right">
+            <div class="new-footer__field new-footer__field--textarea">
+              <label class="new-footer__label new-footer__label--accent"
+                >Питання</label
+              >
+              <textarea
+                class="new-footer__textarea"
+                placeholder="Введіть Ваше питання"
+                maxlength="400"
+                rows="5"
+              ></textarea>
+              <span class="new-footer__char-count">0/400</span>
+            </div>
+
+            <div class="new-footer__checkbox">
+              <input
+                type="checkbox"
+                id="agreeCheckbox"
+                class="new-footer__checkbox-input"
+              />
+              <label
+                for="agreeCheckbox"
+                class="new-footer__checkbox-label"
+              >
+                Я погоджуюсь на умови оферти.
+              </label>
+            </div>
+
+            <button
+              id="submitButton"
+              class="new-footer__btn new-footer__btn--submit"
+              disabled
+            >
+              Надіслати
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Logo, Social, Links -->
+      <div class="new-footer__bottom">
+        <div class="new-footer__bottom-left">
+          <img
+            src="images/site-logo-blue.svg"
+            alt="logo"
+            class="new-footer__logo"
+          />
+
+          <div class="new-footer__social">
+            <a
+              href="#"
+              class="new-footer__social-link"
+              aria-label="Facebook"
+            >
+              <img
+                src="images/facebook.svg"
+                alt="facebook"
+                class="new-footer__social-icon"
+              />
+            </a>
+            <a
+              href="#"
+              class="new-footer__social-link"
+              aria-label="Telegram"
+            >
+              <img
+                src="images/telegram.svg"
+                alt="telegram"
+                class="new-footer__social-icon"
+              />
+            </a>
+            <a
+              href="#"
+              class="new-footer__social-link"
+              aria-label="YouTube"
+            >
+              <img
+                src="images/youtube.svg"
+                alt="youtube"
+                class="new-footer__social-icon"
+              />
+            </a>
+            <a
+              href="#"
+              class="new-footer__social-link"
+              aria-label="Instagram"
+            >
+              <img
+                src="images/instagram.svg"
+                alt="instagram"
+                class="new-footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <nav class="new-footer__nav">
+          <div class="new-footer__nav-column">
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Ми шукаємо</a
+            >
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Договір Публічної оферти (приєднання) для користувачів</a
+            >
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Договір Публічної оферти (приєднання) про надання
+              навчально-інформаційних послуг та тренінгів</a
+            >
+          </div>
+          <div class="new-footer__nav-column">
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Політика повернення коштів</a
+            >
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Політика конфіденційності та політика Сookies</a
+            >
+            <a
+              href="#"
+              class="new-footer__nav-link"
+              >Публічний договір оферти для фахівців</a
+            >
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="copyright-text"></div>
+
+    <script src="header.js"></script>
+    <script src="steps-animation.js"></script>
+    <script src="accordion.js"></script>
+    <script src="services-carousel.js"></script>
+    <script src="footer.js"></script>
+  </body>
+</html>

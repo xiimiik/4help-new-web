@@ -1,0 +1,174 @@
+.new-education {
+  border-radius: 32px;
+  padding: 32px 0;
+  overflow: hidden;
+  position: relative;
+
+  &__title {
+    @include font-bold-title-1;
+    color: $text-icon-stroke-primary;
+    margin-bottom: 32px;
+    padding: 0 32px;
+
+    @include mobile {
+      @include font-bold-title-5;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+  }
+
+  &__scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    animation: scroll-infinite 20s linear infinite;
+    will-change: transform;
+
+    // Pause on hover
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    place-items: start;
+    flex-shrink: 0;
+  }
+
+  &__card-bg {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__card-text {
+    @include font-bold-body-1;
+    color: $text-icon-stroke-primary-inverted;
+    text-align: center;
+    grid-area: 1 / 1;
+    z-index: 1;
+    max-width: 240px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  // Card specific positioning
+  &__card--1 {
+    .new-education__card-bg {
+      width: 384px;
+      height: 283px;
+    }
+  }
+
+  &__card--2 {
+    .new-education__card-bg {
+      width: 362px;
+      height: 311px;
+    }
+  }
+
+  &__card--3 {
+    .new-education__card-bg {
+      width: 425px;
+      height: 376px;
+    }
+  }
+
+  &__card--4 {
+    .new-education__card-bg {
+      width: 373px;
+      height: 376px;
+    }
+  }
+
+  &__card--5 {
+    .new-education__card-bg {
+      width: 304px;
+      height: 282px;
+    }
+  }
+
+  &__card--6 {
+    .new-education__card-bg {
+      width: 386px;
+      height: 376px;
+    }
+  }
+
+  @include mobile {
+    height: 400px;
+
+    &__title {
+      @include font-bold-title-5;
+      top: 16px;
+      left: 16px;
+    }
+
+    &__scroll-container {
+      padding: 0 16px;
+    }
+
+    &__cards {
+      padding: 80px 16px 16px;
+      gap: 12px;
+      min-width: 2000px;
+    }
+
+    &__card-text {
+      @include font-bold-body-2;
+      padding: 20px;
+      max-width: 180px;
+    }
+
+    &__card--1 .new-education__card-bg {
+      width: 280px;
+      height: 206px;
+    }
+
+    &__card--2 .new-education__card-bg {
+      width: 264px;
+      height: 227px;
+    }
+
+    &__card--3 .new-education__card-bg {
+      width: 310px;
+      height: 274px;
+    }
+
+    &__card--4 .new-education__card-bg {
+      width: 272px;
+      height: 274px;
+    }
+
+    &__card--5 .new-education__card-bg {
+      width: 222px;
+      height: 206px;
+    }
+
+    &__card--6 .new-education__card-bg {
+      width: 282px;
+      height: 274px;
+    }
+  }
+}
+
+// Keyframes for infinite scroll
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

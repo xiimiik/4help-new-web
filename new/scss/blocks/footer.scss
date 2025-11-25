@@ -1,5 +1,5 @@
 .new-footer {
-  border-radius: 32px;
+  border-radius: 32px 32px 0 0;
   background-color: $bg-surface;
   max-width: 1360px;
   margin: 0 auto;
@@ -13,67 +13,184 @@
 
   &__body {
     @include font-regular-body-2;
-    color: $grayscale-60;
+    color: $text-icon-stroke-secondary;
     margin-bottom: 8px;
+
+    b {
+      @include font-bold-body-2;
+      color: $text-icon-stroke-secondary;
+    }
   }
 
-  &__form {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;
-    max-width: 1360px;
-    margin: 0 auto;
-    background-color: #fff5e6;
+  // Closed State
+  &__closed {
+    background-color: $orange-5;
     padding: 32px;
+    display: block;
+
+    &.hidden {
+      display: none;
+    }
   }
 
-  &__info {
-    grid-column: 1 / 5;
+  &__closed-content {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
   }
 
-  &__inputs {
-    grid-column: 5 / 9;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;
+  &__closed-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  &__field {
+  &__closed-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  // Open State
+  &__open {
+    background-color: $orange-5;
+    padding: 32px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__open-header {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  &__open-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__open-form {
+    display: flex;
+    gap: 16px;
+  }
+
+  // Buttons
+  &__btn {
+    @include font-bold-body-2;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--primary {
+      background-color: $buttons-primary-default;
+      color: $text-icon-stroke-primary-inverted;
+
+      &:hover {
+        background-color: $buttons-primary-pressed;
+      }
+
+      &:active {
+        background-color: $buttons-primary-pressed;
+      }
+    }
+
+    &--text {
+      background-color: transparent;
+      color: $text-icon-stroke-accent;
+      padding: 12px 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &--submit {
+      background-color: $buttons-primary-disabled;
+      color: $text-icon-stroke-primary-inverted;
+      width: 100%;
+
+      &:not(:disabled) {
+        background-color: $buttons-primary-default;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $buttons-primary-pressed;
+        }
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Form Columns
+  &__form-col {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
-    &--name {
-      grid-column: 1 / 3;
+    &--right {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
+  }
 
-    &--phone {
-      grid-column: 3 / 5;
-    }
+  // Form Fields
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
-    &--contact {
-      grid-column: 1 / 3;
+    &--textarea {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
   }
 
   &__label {
     @include font-bold-body-3;
-    color: $grayscale-60;
+    color: $text-icon-stroke-secondary;
+
+    &--accent {
+      color: $text-icon-stroke-accent;
+    }
   }
 
-  &__input {
+  &__input,
+  &__textarea {
     @include font-regular-body-2;
-    padding: 12px 16px;
-    border: 1px solid $bg-surface-higher;
+    padding: 10px 12px;
+    border: 1px solid transparent;
     border-radius: 8px;
-    background-color: $bg-surface;
+    background-color: $bg-surface-higher;
     color: $text-icon-stroke-primary;
+    height: 40px;
 
     &:focus {
       outline: none;
-      border-color: $buttons-primary-default;
+      border-color: $text-icon-stroke-accent;
     }
 
     &::placeholder {
@@ -81,9 +198,39 @@
     }
   }
 
-  &__submit {
-    grid-column: 3 / 5;
-    align-self: end;
+  &__textarea {
+    height: auto;
+    resize: none;
+    flex: 1;
+    min-height: 120px;
+  }
+
+  &__char-count {
+    @include font-regular-label-1;
+    color: $text-icon-stroke-tertiary;
+    text-align: right;
+  }
+
+  // Checkbox
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__checkbox-input {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $text-icon-stroke-accent;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  &__checkbox-label {
+    @include font-regular-body-3;
+    color: $text-icon-stroke-secondary;
+    cursor: pointer;
   }
 
   &__bottom {
@@ -157,38 +304,30 @@
   }
 
   @include mobile {
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
     margin: 0 16px;
 
-    &__form {
-      display: flex;
-      flex-direction: column;
+    &__closed,
+    &__open {
       padding: 24px 16px;
-      gap: 24px;
     }
 
-    &__info {
-      grid-column: unset;
-    }
-
-    &__inputs {
-      grid-column: unset;
-      display: flex;
+    &__closed-content,
+    &__open-header {
       flex-direction: column;
       gap: 16px;
     }
 
-    &__field {
-      &--name,
-      &--phone,
-      &--contact {
-        grid-column: unset;
+    &__closed-buttons {
+      width: 100%;
+
+      .new-footer__btn {
+        width: 100%;
       }
     }
 
-    &__submit {
-      grid-column: unset;
-      align-self: stretch;
+    &__open-form {
+      flex-direction: column;
     }
 
     &__bottom {
