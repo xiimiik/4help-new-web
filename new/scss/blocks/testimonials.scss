@@ -1,0 +1,71 @@
+.new-testimonials {
+  padding: 32px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+
+  &__text {
+    @include font-regular-body-2;
+    color: $text-icon-stroke-secondary;
+    text-align: center;
+  }
+
+  &__scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 26px;
+  }
+
+  &__logos-group {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    flex-shrink: 0;
+    animation: scroll-testimonials 10s linear infinite;
+    will-change: transform;
+
+    // Pause on hover
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__logo {
+    height: 50px;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  @include mobile {
+    padding: 24px 0;
+    gap: 12px;
+
+    &__scroll-container {
+      gap: 20px;
+    }
+
+    &__logos-group {
+      gap: 20px;
+      animation: scroll-testimonials 25s linear infinite;
+    }
+
+    &__logo {
+      height: 40px;
+    }
+  }
+}
+
+// Keyframes for infinite scroll
+@keyframes scroll-testimonials {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 26px));
+  }
+}

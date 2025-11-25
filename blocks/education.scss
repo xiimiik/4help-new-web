@@ -27,7 +27,8 @@
     display: flex;
     gap: 16px;
     align-items: center;
-    animation: scroll-infinite 20s linear infinite;
+    flex-shrink: 0;
+    animation: scroll-infinite 40s linear infinite;
     will-change: transform;
 
     // Pause on hover
@@ -165,10 +166,10 @@
 
 // Keyframes for infinite scroll
 @keyframes scroll-infinite {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(calc(-50% - 8px));
   }
 }
