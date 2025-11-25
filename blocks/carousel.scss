@@ -1,12 +1,7 @@
-// Services Section
-.new-services {
-  margin-bottom: 120px;
-
-  &__carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
+.new-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 
   &__slide {
     position: relative;
@@ -28,7 +23,6 @@
     width: 1715px;
     height: 1143.33px;
     pointer-events: none;
-    // Fallback gradient background matching Figma design
     background: linear-gradient(
       135deg,
       #4a6fa5 0%,
@@ -154,19 +148,21 @@
     }
   }
 
-  // Responsive styles
   @include mobile {
-    margin-bottom: 60px;
-
     &__slide {
-      height: 400px;
-      border-radius: 16px;
+      height: 500px;
+    }
+
+    &__background {
+      top: -150px;
+      width: 100%;
+      height: 800px;
     }
 
     &__content {
       left: 24px;
       right: 24px;
-      max-width: calc(100% - 48px);
+      max-width: none;
       gap: 16px;
     }
 
@@ -175,7 +171,7 @@
     }
 
     &__description {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &__dots {
@@ -193,50 +189,11 @@
       height: 40px;
       min-width: 40px;
       min-height: 40px;
-    }
 
-    &__background {
-      top: -100px;
-      width: 800px;
-      height: 600px;
-    }
-  }
-}
-
-// Tablet breakpoint
-@media (max-width: 1180px) {
-  .new-services {
-    &__slide {
-      height: 500px;
-    }
-
-    &__content {
-      left: 32px;
-      max-width: 400px;
-    }
-
-    &__title {
-      font-size: 56px;
-    }
-
-    &__description {
-      font-size: 20px;
-    }
-
-    &__dots {
-      left: 32px;
-      bottom: 32px;
-    }
-
-    &__controls {
-      right: 32px;
-      bottom: 32px;
-    }
-
-    &__background {
-      top: -150px;
-      width: 1200px;
-      height: 800px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 }
